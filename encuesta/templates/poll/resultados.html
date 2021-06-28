@@ -1,0 +1,64 @@
+{% extends "poll/base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block main %}
+
+<div class="row" style="text-align: center;">
+
+    <img src="http://www.moyanotelsa.com/themes/sice/images/logo-moyanotelsa.jpg" class="img-fluid" alt="MOYANOTELSA">
+
+
+   
+    
+</div>
+<br>
+<br>
+
+<br>
+
+<div class="row" >
+    {% for item in polls %}
+    <div class="col-lg-8 col-lg-offset-2">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Resultado Pregunta nº {{item.id}}</h3>
+            </div>
+
+
+           
+
+            <div class="panel-body">
+                <h3>{{ item.question }}</h3>
+            </div>
+
+            <ul class="list-group">
+                <li class="list-group-item">{{ item.option_one }} &mdash; <strong>{{ item.option_one_count }}</strong></li>
+                <li class="list-group-item">{{ item.option_two }} &mdash; <strong>{{ item.option_two_count }}</strong></li>
+                <li class="list-group-item">{{ item.option_three }} &mdash; <strong>{{ item.option_three_count }}</strong></li>
+            </ul>
+
+            <div class="panel-footer">
+                Total &mdash; <strong>{{ item.total }}</strong>
+            </div>
+
+       
+
+        </div>
+    </div>
+
+
+
+    {% endfor %}
+   <a href="{% url 'logout'  %}" class="btn btn-primary">Desconectar</a>
+
+   <a href="{% url 'reporte' %}" class="btn btn-success">Exportar</a>
+           
+</div>
+
+
+<br>
+<br>
+
+
+{% endblock %}

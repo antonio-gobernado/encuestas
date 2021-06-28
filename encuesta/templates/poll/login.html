@@ -1,0 +1,65 @@
+{% extends "poll/base.html" %}
+
+{% block title %}Login{% endblock %}
+
+{% block main %}
+
+
+<form method="POST">
+
+    {% csrf_token %}
+
+
+
+    <div class="row">
+
+        <div class="col-md-6 col-md-offset-3">
+
+
+            <div class="form-group">
+
+                <label for="username">Nombre de Usuario:</label>
+                <input type="text" class="form-control" name="username">
+
+            </div>
+
+
+
+        </div>
+
+
+    </div>
+
+    <div class="row">
+
+        <div class="col-md-6 col-md-offset-3">
+
+
+            <div class="form-group">
+
+                <label for="password">Contraseña:</label>
+                <input type="password" class="form-control" name="password">
+
+            </div>
+
+
+
+        </div>
+
+
+    </div>
+    <div class="row">
+
+       <input class="btn btn-primary" type="submit" value="Ingresar">
+
+    </div>
+
+
+
+
+
+</form>
+
+
+
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends "poll/base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block main %}
+
+<div class="row" style="text-align: center;">
+
+    <img src="http://www.moyanotelsa.com/themes/sice/images/logo-moyanotelsa.jpg" class="img-fluid" alt="MOYANOTELSA">
+   
+    
+</div>
+<br>
+<br>
+<br>
+
+<div class="row" style="text-align: center;">
+
+    <img src="http://www.moyanotelsa.com/sites/MoyanoTelsa/files/2018-01/icon_broadcast.jpg" class="img-fluid" alt="MOYANOTELSA">
+    <img src="http://www.moyanotelsa.com/sites/MoyanoTelsa/files/2018-01/icon_cableado_estructurado.jpg" class="img-fluid" alt="MOYANOTELSA">
+    
+</div>
+<br>
+<br>
+
+<div class="row" >
+   
+            <div class="panel-heading" style="text-align: center;">
+                <h3 class="panel-title">Esta App ayudará a tu empresa a establecer la idoneidad de la consulta y participación de los trabajadores de MOYANO TELSA.</h3>
+                <h5>Uno de los principales factores que influyen directamente en la productividad de una empresa es la satisfacción de sus empleados. Y es que está más que demostrado que a mayor satisfacción, mayor motivación y por tanto se produce un aumento de la productividad y la eficiencia empresarial.</h5>
+            </div>
+</div>
+
+<div class="row" style="text-align: center;">
+
+<a href="{% url 'home' 1 %}" class="btn btn-primary">Empieza la encuesta</a>
+</div>
+
+<br>
+<br>
+
+<h6>Desarrollada por <b>Antonio Gobernado@2021</b></h6>
+
+{% endblock %}

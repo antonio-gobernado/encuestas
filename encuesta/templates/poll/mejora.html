@@ -1,0 +1,61 @@
+{% extends "poll/base.html" %}
+
+
+{% load static %}
+
+
+
+{% block title %}Home{% endblock %}
+
+{% block main %}
+<div class="row">
+    <div class="col-lg-8 col-lg-offset-2">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Pregunta abierta</h3>
+            </div>
+
+         
+        
+
+            <div class="panel-body">
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h3>¿Qué mejorarías en cuanto a Seguridad y Salud en el Trabajo dentro de nuestra Organizacion?</h3>
+                    </div>
+                </div>
+                
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <hr />
+                      
+                         <form  method="POST" >
+                            {% csrf_token %}
+                           
+                                    <label for="comment">Commentario:</label>
+                                
+                                    <textarea class="form-control" rows="5" id="comment" name="texto"></textarea>
+                                
+                                 
+
+
+                            <hr />
+
+
+                            <button   type="submit" class="btn btn-info">
+                               Vota
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+         
+        </div>
+
+ 
+    </div>
+</div>
+{% endblock %}
