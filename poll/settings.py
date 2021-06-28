@@ -83,8 +83,8 @@ WSGI_APPLICATION = 'poll.wsgi.application'
  #       'NAME': BASE_DIR / 'db.sqlite3',
   #  }
 #}
-#import dj_database_url
-#from decouple import config
+import dj_database_url
+from decouple import config
 
 DATABASES = {
     'default': dj_database_url.config(
