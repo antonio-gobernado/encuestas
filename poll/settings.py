@@ -137,10 +137,8 @@ STATICFILES_DIRS = (
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 LOGIN_REDIRECT_URL= '/resultados/'
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
-# Activate Django-Heroku
-django_heroku.settings(locals())
+
