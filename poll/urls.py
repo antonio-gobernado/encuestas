@@ -37,4 +37,4 @@ urlpatterns = [
     path('reporte/', poll_views.ReporteExcel, name='reporte'),
           
 
-]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
